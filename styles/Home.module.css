@@ -10,25 +10,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background: url("./images/Happy Stevemas Banner.png");
+  background-size: contain;
+  background-position: top;
+  background: cover; */
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
+.title {
   color: #0070f3;
   text-decoration: none;
 }
@@ -83,6 +71,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  height: 150px;
 }
 
 .card:hover,
