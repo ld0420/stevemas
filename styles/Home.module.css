@@ -10,7 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: url("./images/Happy Stevemas Banner.png");
+  /* background-color: mediumseagreen;
+  background: url("./images/Happy Stevemas Banner.png");
   background-size: contain;
   background-position: top;
   background: cover; */
@@ -70,8 +71,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-  height: 150px;
+  width: 300px;
+  height: 180px;
 }
 
 .card:hover,
@@ -115,4 +116,48 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.userName {
+  width: 500px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 6px;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.userMessage {
+  width: 500px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 6px;
+  text-align: left;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.saveBtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: lightblue;
+  font-size: 20px;
+}
+
+.messages {
+  width: 75%;
+}
+
+.messageCard {
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 4px 20px;
+  margin: 6px;
+}
+
+.messageName {
+  font-size: 20px;
 }

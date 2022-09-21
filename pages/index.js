@@ -27,12 +27,16 @@ export default function Home() {
             <p>Description here</p>
           </button>
 
-          {/* <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <button
+            className={styles.card}
+            type="button"
+            onClick={() => router.push("/create")}
+          >
+            <h2>Leave a birthday message for Steve &rarr;</h2>
+            <p>description</p>
+          </button>
 
-          <a
+          {/* <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className={styles.card}
           >
