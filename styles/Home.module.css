@@ -1,8 +1,6 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
+  min-height: 100vh;
+  flex: 1;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
@@ -15,6 +13,7 @@
 }
 
 .createContainer {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +39,8 @@
 .leaveMessageHeader {
   color: palegreen;
   font-family: fantasy;
+  margin: 8px;
+  text-align: center;
 }
 
 .messages {
@@ -136,7 +137,7 @@
   width: 75%;
   height: 40px;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 8px;
   margin: 6px;
   box-shadow: 0 0 10px #9ecaed;
@@ -146,7 +147,7 @@
   width: 75%;
   height: 100px;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 8px;
   margin: 6px;
   text-align: left;
@@ -157,16 +158,19 @@
   width: 135px;
   height: 40px;
   border-radius: 17px;
-  background-color: lightgrey;
+  background-color: whitesmoke;
   font-size: 16px;
+  font-family: fantasy;
+  line-height: 38px;
 }
 
 .messageCard {
   border: 1px solid black;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 4px 20px;
   margin: 6px;
   background-color: whitesmoke;
+  color: black;
 }
 
 .messageName {
