@@ -16,10 +16,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("./images/Happy Stevemas Banner.png");
+  /* background: url("./images/Happy Stevemas Banner.png");
   background-size: contain;
   background-position: top;
-  background: cover;
+  background: cover; */
 }
 
 .createForm {
@@ -31,9 +31,9 @@
 }
 
 .leaveMessageHeader {
-  color: antiquewhite;
+  color: black;
   font-family: fantasy;
-  margin: 8px;
+  margin: 16px;
   text-align: center;
 }
 
@@ -128,24 +128,24 @@
 }
 
 .userName {
-  width: 75%;
+  width: 80%;
   height: 40px;
-  border: none;
   border-radius: 10px;
+  border: none;
   padding: 8px;
   margin: 6px;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0px 0px 14px 0px lightgrey;
 }
 
 .userMessage {
-  width: 75%;
+  width: 80%;
   height: 100px;
   border: none;
   border-radius: 10px;
   padding: 8px;
   margin: 6px;
   text-align: left;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0px 0px 14px 0px lightgrey;
 }
 
 .saveBtn {
@@ -183,7 +183,7 @@
   text-align: center;
   font-size: 19px;
   line-height: 28px;
-  background-color: black;
+  background-color: darkslategray;
   color: white;
   padding: 24px;
 }
@@ -243,9 +243,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px 0px;
-  background-color: black;
+  margin: 20px;
+  background-color: darkslategray;
   color: white;
   padding: 24px;
   height: 170px;
+  border-radius: 20px;
 }
