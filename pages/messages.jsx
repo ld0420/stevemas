@@ -1,17 +1,25 @@
 import React from "react";
-import prisma from "../lib/prisma";
 import styles from "../styles/Home.module.css";
+import Create from "../components/create";
 
-const Messages = (props) => {
-  console.log("lara", props);
+import useSWR from "swr";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+const Messages = () => {
+  const { data, error } = useSWR("/api/messages", fetcher);
+
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading...</div>;
+
   return (
     <div>
-      <div className={styles.main}>
-        <h1>All Messages</h1>
+      <div className={styles.createContainer}>
+        <Create />
         <main className={styles.messages}>
-          {props.messages.map((post, ind) => (
+          {data.map((post, ind) => (
             <div className={styles.messageCard} key={ind}>
-              <p className={styles.messageName}>{post.author}</p>
+              <p className={styles.messageName}>from: {post.author}</p>
               <p className={styles.messageText}>{post.message}</p>
             </div>
           ))}
@@ -19,18 +27,6 @@ const Messages = (props) => {
       </div>
     </div>
   );
-};
-
-export const getServerSideProps = async () => {
-  const messages = await prisma.post.findMany({
-    select: {
-      author: true,
-      message: true
-    }
-  });
-  return {
-    props: { messages }
-  };
 };
 
 export default Messages;

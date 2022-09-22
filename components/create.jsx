@@ -10,22 +10,25 @@ const Create = () => {
     e.preventDefault();
   };
   const handleSave = async () => {
+    setMessage("");
+    setName("");
     try {
       const body = { author, message };
-      await fetch("/api/post", {
+      await fetch("/api/messages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
-      await Router.push("/messages");
     } catch (error) {
       console.error(error);
     }
   };
   return (
-    <form onSubmit={submitData} className={styles.main}>
-      <h1>Leave a birthday message for Steve</h1>
-      <input
+    <form onSubmit={submitData} className={styles.createForm}>
+      <h2 className={styles.leaveMessageHeader}>
+        Leave a birthday message for Steve
+      </h2>
+      <textarea
         className={styles.userName}
         type="text"
         value={author}
