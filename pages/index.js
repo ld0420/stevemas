@@ -30,7 +30,7 @@ export default function Home() {
             type="button"
             onClick={() => router.push("/messages")}
           >
-            <h2>Leave a birthday message for Steve &rarr;</h2>
+            <h2>Leave a birthday message &rarr;</h2>
           </button>
         </div>
       </main>

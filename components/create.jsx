@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.css";
 import React, { useState } from "react";
-import Router from "next/router";
 
 const Create = () => {
   const [message, setMessage] = useState("");
