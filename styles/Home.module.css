@@ -198,7 +198,7 @@
 .questQuestions {
   min-height: 100vh;
   margin: 0 24px;
-  margin-bottom: 6rem;
+  padding-bottom: 6rem;
 }
 
 .questItem {
@@ -208,9 +208,6 @@
 .checkbox {
   margin-bottom: 8px;
   vertical-align: middle;
-  background-color: white;
-  color: white;
-  background-color: transparent;
 }
 
 .questLabel {
@@ -261,6 +258,7 @@
   display: flex;
   justify-content: center;
   margin-top: 8px;
+  margin-bottom: 24px;
 }
 
 .questSubmitBtn {
