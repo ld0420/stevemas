@@ -181,6 +181,7 @@
 .questContainer {
   background-color: white;
   color: black;
+  min-height: 100vh;
 }
 
 .questHeader {
@@ -206,6 +207,7 @@
   margin-bottom: 8px;
   vertical-align: middle;
   background-color: white;
+  color: white;
 }
 
 .questLabel {
