@@ -2,34 +2,36 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
-export const QuestItem = ({
-  quest,
-  ind,
-  quest1IsDone,
-  setQuest1IsDone,
-  quest3IsDone,
-  setQuest3IsDone
-}) => {
+export const QuestItem = ({ quest, ind, setQuestIsDone }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [secretPhrase, setSecretPhrase] = useState("");
   const [playaName, setPlayaName] = useState("");
 
-  useEffect(() => {
-    if (secretPhrase.toLowerCase() === "shakira") {
-      setQuest1IsDone(true);
-    }
+  const handleQuestSubmit = () => {
+    setIsChecked(!isChecked);
+  };
 
-    if (playaName.toLocaleLowerCase() === "sunshine") {
-      setQuest3IsDone(true);
+  useEffect(() => {
+    if (ind === 1 && secretPhrase.toLowerCase() === "shakira" && isChecked) {
+      setQuestIsDone(isChecked);
+    } else if (
+      ind === 3 &&
+      playaName.toLocaleLowerCase() === "sunshine" &&
+      isChecked
+    ) {
+      setQuestIsDone(isChecked);
+    } else if (ind !== 1 && ind !== 3 && isChecked) {
+      setQuestIsDone(isChecked);
     }
-  }, [playaName, secretPhrase, setQuest1IsDone, setQuest3IsDone]);
+  }, [isChecked, secretPhrase, playaName, ind, setQuestIsDone]);
   return (
     <div className={styles.questItem}>
       <input
         className={styles.checkbox}
         type="checkbox"
+        value={isChecked}
         checked={isChecked}
-        onClick={() => setIsChecked(!isChecked)}
+        onClick={handleQuestSubmit}
       />
       <span className={styles.questLabel}>
         Quest {ind}: {quest.name}

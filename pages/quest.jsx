@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { QuestItem } from "../components/questItem";
-import { namesList } from "../components/names";
 import { useRouter } from "next/router";
 
 const Quest = () => {
@@ -43,6 +42,8 @@ const Quest = () => {
         // eslint-disable-next-line react/jsx-key
         <a
           className={styles.link}
+          target="_blank"
+          rel="noreferrer noopener"
           href="https://photos.app.goo.gl/zyhFKj5cpicbWDYa9"
         >
           Upload pictures here
@@ -50,109 +51,81 @@ const Quest = () => {
       ]
     }
   ]);
-  const [completed, setCompleted] = useState(false);
-  const [elfName, setElfName] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
   const [quest1IsDone, setQuest1IsDone] = useState(false);
+  const [quest2IsDone, setQuest2IsDone] = useState(false);
   const [quest3IsDone, setQuest3IsDone] = useState(false);
+  const [quest4IsDone, setQuest4IsDone] = useState(false);
+  const [quest5IsDone, setQuest5IsDone] = useState(false);
+  const [quest6IsDone, setQuest6IsDone] = useState(false);
   const router = useRouter();
 
   const handleClick = () => {
     router.push("/elfName");
-    // const indOne = Math.floor(Math.random() * 88);
-    // const indTwo = Math.floor(Math.random() * 88);
-
-    // while (indOne === indTwo) {
-    //   indTwo = Math.floor(Math.random() * 88);
-    // }
-
-    // setElfName(namesList[indOne] + " " + namesList[indTwo]);
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 1000);
-    // setCompleted(true);
   };
+  console.log("lara quest 1 is done", quest1IsDone);
+  console.log("lara quest 2 is done", quest2IsDone);
+  console.log("lara quest 3 is done", quest3IsDone);
 
   return (
     <div>
       <div>
         <h2 className={styles.questHeader}>
-          You can find out your Elf name only after you finish the quest
+          The greatest honor of Stevemas is to become an Elf!
+          <br />
+          Complete these 6 tasks and St. Bartel will give your Elven name!
         </h2>
 
         <div className={styles.questQuestions}>
           <QuestItem
             quest={questList[0]}
             ind={1}
-            quest1IsDone={quest1IsDone}
-            setQuest1IsDone={setQuest1IsDone}
-            quest3IsDone={quest3IsDone}
-            setQuest3IsDone={setQuest3IsDone}
+            setQuestIsDone={setQuest1IsDone}
           />
           {quest1IsDone && (
             <QuestItem
               quest={questList[1]}
               ind={2}
-              quest1IsDone={quest1IsDone}
-              setQuest1IsDone={setQuest1IsDone}
-              quest3IsDone={quest3IsDone}
-              setQuest3IsDone={setQuest3IsDone}
+              setQuestIsDone={setQuest2IsDone}
             />
           )}
-          {quest1IsDone && (
+          {quest2IsDone && (
             <QuestItem
               quest={questList[2]}
               ind={3}
-              quest1IsDone={quest1IsDone}
-              setQuest1IsDone={setQuest1IsDone}
-              quest3IsDone={quest3IsDone}
-              setQuest3IsDone={setQuest3IsDone}
+              setQuestIsDone={setQuest3IsDone}
             />
           )}
           {quest3IsDone && (
             <QuestItem
               quest={questList[3]}
               ind={4}
-              quest1IsDone={quest1IsDone}
-              setQuest1IsDone={setQuest1IsDone}
-              quest3IsDone={quest3IsDone}
-              setQuest3IsDone={setQuest3IsDone}
+              setQuestIsDone={setQuest4IsDone}
             />
           )}
-          {quest3IsDone && (
+          {quest4IsDone && (
             <QuestItem
               quest={questList[4]}
               ind={5}
-              quest1IsDone={quest1IsDone}
-              setQuest1IsDone={setQuest1IsDone}
-              quest3IsDone={quest3IsDone}
-              setQuest3IsDone={setQuest3IsDone}
+              setQuestIsDone={setQuest5IsDone}
             />
           )}
-          {quest3IsDone && (
+          {quest5IsDone && (
             <QuestItem
               quest={questList[5]}
               ind={6}
-              quest1IsDone={quest1IsDone}
-              setQuest1IsDone={setQuest1IsDone}
-              quest3IsDone={quest3IsDone}
-              setQuest3IsDone={setQuest3IsDone}
+              setQuestIsDone={setQuest6IsDone}
             />
           )}
         </div>
 
-        <div className={styles.questBtnContainer}>
-          <button className={styles.questSubmitBtn} onClick={handleClick}>
-            Are you done? Honor code!
-          </button>
-        </div>
+        {quest6IsDone && (
+          <div className={styles.questBtnContainer}>
+            <button className={styles.questSubmitBtn} onClick={handleClick}>
+              Are you done? Honor code!
+            </button>
+          </div>
+        )}
       </div>
-      {/* {completed && (
-        <div className={styles.elfNameContainer}>
-          <div className={styles.loading}>Your Elf name is:</div>
-          {!isLoading && <div className={styles.elfName}>{elfName}</div>}
-        </div>
-      )} */}
     </div>
   );
 };

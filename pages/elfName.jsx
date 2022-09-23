@@ -22,10 +22,12 @@ const ElfName = () => {
 
   return (
     <div className={styles.elfNameContainer}>
+      <hr className={styles.divider} />
       <div className={styles.loading}>And your Elf name is...</div>
       {!isLoading && (
         <div className={styles.elfName}>{elfName.toUpperCase()}</div>
       )}
+      <hr className={styles.divider} />
     </div>
   );
 };
