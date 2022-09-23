@@ -25,7 +25,6 @@ a {
   }
 }
 
-input[type="checkbox"]:checked {
-  -webkit-appearance: none;
+input[type="checkbox"] {
   background-color: transparent;
 }
