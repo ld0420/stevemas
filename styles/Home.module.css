@@ -45,12 +45,15 @@
   margin: 0;
   line-height: 1.15;
   font-size: 3rem;
+  text-align: center;
 }
 
-.title,
 .description {
   text-align: center;
   color: antiquewhite;
+  margin: 8px;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .code {
@@ -71,7 +74,7 @@
 }
 
 .card {
-  margin: 1rem;
+  margin: 2rem;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -79,8 +82,7 @@
   border: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 300px;
-  height: 106px;
+  height: 77px;
 }
 
 .card:hover,
@@ -194,7 +196,7 @@
 }
 
 .questItem {
-  margin: 12px;
+  padding: 3px;
 }
 
 .checkbox {
@@ -204,6 +206,38 @@
 
 .questLabel {
   margin-left: 10px;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.stepsList {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  padding-left: 24px;
+}
+
+.step {
+  line-height: 1.3em;
+  margin-top: 3px;
+  margin-left: 12px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  color: slategray;
+}
+
+.phraseInput {
+  margin-left: 12px;
+  width: 145px;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 6px;
+}
+
+.link {
+  text-decoration: underline;
+  color: blue;
 }
 
 .divider {
@@ -213,29 +247,27 @@
 .questBtnContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 8px;
+  margin-bottom: 50px;
 }
 
 .questSubmitBtn {
-  width: 135px;
-  height: 40px;
+  width: 252px;
+  height: 44px;
   border-radius: 40px;
   border: none;
-  background-color: green;
+  background-color: slategray;
   color: white;
   font-size: 16px;
 }
 
 .loading {
   font-size: 24px;
-  font-variant: small-caps;
-  margin: 12px;
 }
 
 .elfName {
   font-size: 24px;
-  font-variant: small-caps;
-  margin: 12px;
+  margin: 40px;
   font-weight: bold;
 }
 
@@ -244,10 +276,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  background-color: darkslategray;
-  color: white;
-  padding: 24px;
-  height: 170px;
-  border-radius: 20px;
+  background-color: lightgray;
+  color: black;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

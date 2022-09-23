@@ -22,10 +22,9 @@ const ElfName = () => {
 
   return (
     <div className={styles.elfNameContainer}>
-      {isLoading ? (
-        <div className={styles.loading}>And your Elf name is...</div>
-      ) : (
-        <div className={styles.loading}>{elfName}</div>
+      <div className={styles.loading}>And your Elf name is...</div>
+      {!isLoading && (
+        <div className={styles.elfName}>{elfName.toUpperCase()}</div>
       )}
     </div>
   );
