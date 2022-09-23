@@ -178,6 +178,10 @@
   font-family: serif;
 }
 
+.questContainer {
+  background-color: white;
+}
+
 .questHeader {
   text-align: center;
   font-size: 19px;

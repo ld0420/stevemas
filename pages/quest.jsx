@@ -67,7 +67,7 @@ const Quest = () => {
   console.log("lara quest 3 is done", quest3IsDone);
 
   return (
-    <div>
+    <div className={styles.questContainer}>
       <div>
         <h2 className={styles.questHeader}>
           The greatest honor of Stevemas is to become an Elf!
