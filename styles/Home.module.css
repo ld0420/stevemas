@@ -198,6 +198,7 @@
 .questQuestions {
   min-height: 100vh;
   margin: 0 24px;
+  margin-bottom: 6rem;
 }
 
 .questItem {
@@ -209,6 +210,7 @@
   vertical-align: middle;
   background-color: white;
   color: white;
+  background-color: transparent;
 }
 
 .questLabel {
@@ -259,7 +261,6 @@
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 50px;
 }
 
 .questSubmitBtn {

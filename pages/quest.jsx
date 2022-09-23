@@ -116,15 +116,15 @@ const Quest = () => {
               setQuestIsDone={setQuest6IsDone}
             />
           )}
-        </div>
 
-        {quest6IsDone && (
-          <div className={styles.questBtnContainer}>
-            <button className={styles.questSubmitBtn} onClick={handleClick}>
-              Are you done? Honor code!
-            </button>
-          </div>
-        )}
+          {quest6IsDone && (
+            <div className={styles.questBtnContainer}>
+              <button className={styles.questSubmitBtn} onClick={handleClick}>
+                Are you done? Honor code!
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
