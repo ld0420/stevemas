@@ -196,6 +196,7 @@
 }
 
 .questQuestions {
+  min-height: 100vh;
   margin: 0 24px;
 }
 
